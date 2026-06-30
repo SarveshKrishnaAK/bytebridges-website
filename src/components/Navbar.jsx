@@ -2,6 +2,7 @@ import { useTheme } from "../context/ThemeContext";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Logo from "./Logo";
 
 // Magnetic link component
 function MagneticLink({ to, children, onClick }) {
@@ -37,7 +38,7 @@ function MagneticLink({ to, children, onClick }) {
         {children}
       </Link>
       <motion.span
-        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-indigo-500 to-purple-500"
+        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-cyan-500 to-blue-500"
         initial={{ width: "0%" }}
         whileHover={{ width: "100%" }}
         transition={{ duration: 0.3 }}
@@ -122,17 +123,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
             className="flex items-center gap-2"
           >
-            <motion.img
-              src="/favicon.svg"
-              alt="BinaryBase Logo"
-              className="w-8 h-8"
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.5 }}
-            />
-            <span className="text-xl font-bold tracking-tight">
-              <span className="text-black dark:text-white">Binary</span>
-              <span className="gradient-text ml-1">Base</span>
-            </span>
+            <Logo />
           </motion.div>
         </Link>
 
@@ -187,7 +178,7 @@ export default function Navbar() {
             <div className="absolute inset-0 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors overflow-hidden">
               {/* Background glow effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20"
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"
                 animate={{ opacity: darkMode ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
               />
@@ -234,7 +225,7 @@ export default function Navbar() {
                   <Link
                     to={link.to}
                     onClick={() => handleNavClick(link.to, link.section)}
-                    className="block py-3 text-lg font-medium text-black dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    className="block py-3 text-lg font-medium text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                   >
                     {link.label}
                   </Link>

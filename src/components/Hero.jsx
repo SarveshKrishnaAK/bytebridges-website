@@ -26,12 +26,12 @@ export default function Hero() {
           className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px]"
           style={{ y }}
         >
-          <div className="w-full h-full rounded-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 blur-3xl animate-morph" />
+          <div className="w-full h-full rounded-full bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-cyan-500/20 blur-3xl animate-morph" />
         </motion.div>
 
         {/* Floating orbs */}
         <motion.div
-          className="absolute top-20 left-[10%] w-32 h-32 md:w-48 md:h-48 rounded-full bg-indigo-500/30 blur-3xl"
+          className="absolute top-20 left-[10%] w-32 h-32 md:w-48 md:h-48 rounded-full bg-cyan-500/30 blur-3xl"
           animate={{
             y: [0, -30, 0],
             x: [0, 20, 0],
@@ -44,7 +44,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-[10%] w-40 h-40 md:w-56 md:h-56 rounded-full bg-purple-500/25 blur-3xl"
+          className="absolute bottom-20 right-[10%] w-40 h-40 md:w-56 md:h-56 rounded-full bg-blue-500/25 blur-3xl"
           animate={{
             y: [0, 40, 0],
             x: [0, -30, 0],
@@ -57,7 +57,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute top-1/3 right-[20%] w-24 h-24 md:w-32 md:h-32 rounded-full bg-pink-500/20 blur-2xl"
+          className="absolute top-1/3 right-[20%] w-24 h-24 md:w-32 md:h-32 rounded-full bg-cyan-500/20 blur-2xl"
           animate={{
             y: [0, 20, 0],
             rotate: [0, 180, 360],
@@ -70,7 +70,7 @@ export default function Hero() {
         />
 
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,black_40%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.08)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,black_40%,transparent_100%)]" />
       </div>
 
       <motion.div
@@ -82,15 +82,32 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 dark:bg-indigo-500/20 border border-indigo-500/20 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 border border-cyan-500/20 mb-8"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
           </span>
-          <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">
-            Available for new projects
+          <span className="text-sm text-cyan-600 dark:text-cyan-400 font-medium">
+            Binary runtime online
           </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
+          className="mb-5 flex justify-center gap-2 text-xs tracking-[0.24em] uppercase"
+        >
+          {[
+            "0100 0010",
+            "1001 0110",
+            "0011 0101",
+          ].map((code) => (
+            <span key={code} className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-cyan-700 dark:text-cyan-300">
+              {code}
+            </span>
+          ))}
         </motion.div>
 
         {/* Main heading with animated text */}
@@ -98,7 +115,7 @@ export default function Hero() {
           className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-black dark:text-white leading-[1.1]"
           delay={0.2}
         >
-          We Build High-Performance Digital Solutions
+          We Build Binary-Grade Digital Systems
         </AnimatedHeading>
 
         {/* Subtitle */}
@@ -108,9 +125,9 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-8 text-lg md:text-xl max-w-2xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed"
         >
-          Web development, performance optimization, mobile apps, and seamless API integrations —{" "}
-          <span className="text-indigo-600 dark:text-indigo-400 font-medium">
-            delivered with speed, clarity, and precision.
+          Web platforms, product architecture, and seamless API integration translated into reliable 0/1 outcomes {" "}
+          <span className="text-cyan-600 dark:text-cyan-400 font-medium">
+            with speed, clarity, and precision.
           </span>
         </motion.p>
 

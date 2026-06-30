@@ -10,7 +10,7 @@ export default function ParticleField() {
     return {
       x: Math.random() * canvas.width,
       y: isInitial ? Math.random() * canvas.height : canvas.height + 10,
-      size: Math.random() * 2 + 0.5,
+      size: Math.random() * 11 + 10,
       speedY: Math.random() * 0.5 + 0.2,
       speedX: (Math.random() - 0.5) * 0.3,
       opacity: 0,
@@ -18,6 +18,7 @@ export default function ParticleField() {
       fadeIn: true,
       wobble: Math.random() * Math.PI * 2,
       wobbleSpeed: Math.random() * 0.02 + 0.01,
+      bit: Math.random() > 0.5 ? "1" : "0",
     };
   }, []);
 
@@ -52,7 +53,7 @@ export default function ParticleField() {
 
       // Get theme
       const isDark = document.documentElement.classList.contains("dark");
-      const particleColor = isDark ? "139, 92, 246" : "99, 102, 241"; // purple/indigo
+      const particleColor = isDark ? "34, 211, 238" : "37, 99, 235";
 
       particles.forEach((p, index) => {
         // Update wobble
@@ -80,17 +81,14 @@ export default function ParticleField() {
           p.opacity -= 0.008;
         }
 
-        // Draw particle with glow
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        // Draw binary glyph with subtle glow.
+        ctx.font = `${p.size}px 'Courier New', monospace`;
         ctx.fillStyle = `rgba(${particleColor}, ${p.opacity})`;
-        ctx.fill();
+        ctx.fillText(p.bit, p.x, p.y);
 
-        // Add subtle glow
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${particleColor}, ${p.opacity * 0.3})`;
-        ctx.fill();
+        ctx.font = `${p.size * 1.4}px 'Courier New', monospace`;
+        ctx.fillStyle = `rgba(${particleColor}, ${p.opacity * 0.2})`;
+        ctx.fillText(p.bit, p.x - 2, p.y + 2);
 
         // Reset particle if it's off screen or faded
         if (p.y < -10 || p.opacity <= 0) {

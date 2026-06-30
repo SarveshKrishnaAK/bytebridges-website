@@ -5,6 +5,7 @@ import ParticleField from "./components/ParticleField";
 import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BinaryCompanion from "./components/BinaryCompanion";
 import HomePage from "./pages/HomePage";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import LLMDevelopment from "./pages/services/LLMDevelopment";
@@ -72,7 +73,7 @@ function LoadingScreen({ onComplete }) {
           transition={{ delay: 0.3 }}
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+            className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -94,12 +95,15 @@ function AppContent() {
       <ParticleField />
 
       {/* Mesh Gradient Background */}
-      <div className="fixed inset-0 -z-20 mesh-gradient opacity-50 pointer-events-none" />
+      <div className="fixed inset-0 -z-20 mesh-gradient opacity-65 pointer-events-none" />
+
+      {/* Binary drizzle layer */}
+      <div className="binary-rain fixed inset-0 -z-[18] pointer-events-none" />
 
       {/* Animated Background Orbs */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 left-[5%] w-72 h-72 md:w-[500px] md:h-[500px] rounded-full bg-indigo-500/10 blur-3xl"
+          className="absolute top-20 left-[5%] w-72 h-72 md:w-[500px] md:h-[500px] rounded-full bg-cyan-500/10 blur-3xl"
           animate={{
             y: [0, -50, 0],
             x: [0, 30, 0],
@@ -112,7 +116,7 @@ function AppContent() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-[5%] w-72 h-72 md:w-[600px] md:h-[600px] rounded-full bg-purple-500/10 blur-3xl"
+          className="absolute bottom-20 right-[5%] w-72 h-72 md:w-[600px] md:h-[600px] rounded-full bg-blue-500/10 blur-3xl"
           animate={{
             y: [0, 50, 0],
             x: [0, -30, 0],
@@ -125,7 +129,7 @@ function AppContent() {
           }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[700px] md:h-[700px] rounded-full bg-pink-500/5 blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[700px] md:h-[700px] rounded-full bg-cyan-500/5 blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -142,6 +146,8 @@ function AppContent() {
       <div className="fixed inset-0 -z-5 pointer-events-none opacity-[0.015] dark:opacity-[0.03]">
         <div className="absolute inset-0 noise-overlay" />
       </div>
+
+      <BinaryCompanion />
 
       {/* Main content */}
       <Navbar />

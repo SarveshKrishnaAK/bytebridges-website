@@ -56,7 +56,7 @@ export default function Pricing() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[300px] sm:h-[400px] bg-gradient-to-b from-indigo-500/10 to-transparent blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[300px] sm:h-[400px] bg-gradient-to-b from-cyan-500/10 to-transparent blur-3xl" />
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -66,7 +66,7 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-indigo-600/15 dark:bg-indigo-500/15 text-indigo-700 dark:text-indigo-400 mb-4"
+              className="inline-block px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-cyan-600/15 dark:bg-cyan-500/15 text-cyan-700 dark:text-cyan-400 mb-4"
             >
               Transparent Pricing
             </motion.span>
@@ -111,7 +111,7 @@ export default function Pricing() {
                   <div
                     className={`p-6 sm:p-8 lg:p-10 h-full rounded-2xl flex flex-col relative overflow-hidden
                     ${plan.featured
-                      ? "bg-gradient-to-b from-indigo-600 to-purple-700 text-white"
+                      ? "bg-gradient-to-b from-cyan-600 to-blue-700 text-white"
                       : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800"
                     }`}
                   >
@@ -159,7 +159,7 @@ export default function Pricing() {
                           className={`flex items-start gap-2 sm:gap-3 text-xs sm:text-sm ${plan.featured ? "text-white/90" : "text-gray-700 dark:text-gray-400"}`}
                         >
                           <svg
-                            className={`w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0 ${plan.featured ? "text-white" : "text-indigo-600 dark:text-indigo-400"}`}
+                            className={`w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0 ${plan.featured ? "text-white" : "text-cyan-600 dark:text-cyan-400"}`}
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -177,7 +177,7 @@ export default function Pricing() {
                         <MagneticButton
                           href="#contact"
                           variant="secondary"
-                          className="w-full justify-center !bg-white !text-indigo-600 font-semibold hover:!bg-gray-100 active:!scale-95 text-sm sm:text-base"
+                          className="w-full justify-center !bg-white !text-cyan-600 font-semibold hover:!bg-gray-100 active:!scale-95 text-sm sm:text-base"
                         >
                           Get Started
                         </MagneticButton>

@@ -18,15 +18,15 @@ function FloatingInput({ type = "text", name, label, value, onChange, required =
     border-2 border-gray-200 dark:border-neutral-800
     text-black dark:text-white
     outline-none transition-all duration-300
-    focus:border-indigo-500 dark:focus:border-indigo-400
-    focus:shadow-lg focus:shadow-indigo-500/10
+    focus:border-cyan-500 dark:focus:border-cyan-400
+    focus:shadow-lg focus:shadow-cyan-500/10
     hover:border-gray-300 dark:hover:border-neutral-700
   `;
 
   const labelClasses = `
     absolute left-4 transition-all duration-300 pointer-events-none
     ${isActive
-      ? "top-2 text-xs text-indigo-600 dark:text-indigo-400 font-medium"
+      ? "top-2 text-xs text-cyan-600 dark:text-cyan-400 font-medium"
       : "top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400"
     }
   `;
@@ -61,13 +61,13 @@ function FloatingInput({ type = "text", name, label, value, onChange, required =
           className={inputClasses}
         />
       )}
-      <label className={multiline && isActive ? "absolute left-4 top-2 text-xs text-indigo-600 dark:text-indigo-400 font-medium transition-all duration-300 pointer-events-none" : labelClasses}>
+      <label className={multiline && isActive ? "absolute left-4 top-2 text-xs text-cyan-600 dark:text-cyan-400 font-medium transition-all duration-300 pointer-events-none" : labelClasses}>
         {label}
       </label>
 
       {/* Focus glow effect */}
       <motion.div
-        className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-xl"
+        className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: isFocused ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -140,7 +140,7 @@ export default function Contact() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-indigo-500/10 to-transparent blur-3xl" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-cyan-500/10 to-transparent blur-3xl" />
         </div>
 
         <motion.div
@@ -153,7 +153,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-4"
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 mb-4"
             >
               Get In Touch
             </motion.span>

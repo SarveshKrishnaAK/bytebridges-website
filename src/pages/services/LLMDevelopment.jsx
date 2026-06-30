@@ -99,7 +99,7 @@ export default function LLMDevelopment() {
       subtitle="AI that understands your business"
       description="We build intelligent AI systems trained on your knowledge. Private, secure, and designed specifically for how you work. Your competitive advantage wrapped in natural language."
       icon={<LLMIcon />}
-      gradient="from-purple-500 to-pink-500"
+      gradient="from-blue-500 to-cyan-500"
       features={features}
       techStack={techStack}
       process={process}

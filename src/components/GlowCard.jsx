@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function GlowCard({
   children,
   className = "",
-  glowColor = "rgba(99, 102, 241, 0.4)",
+  glowColor = "rgba(6, 182, 212, 0.35)",
   tiltAmount = 10,
   glowSize = 200,
 }) {
@@ -83,7 +83,7 @@ export default function GlowCard({
         className="absolute -inset-[1px] rounded-2xl opacity-0 transition-opacity duration-300"
         style={{
           opacity: isHovered ? 1 : 0,
-          background: "linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5))",
+          background: "linear-gradient(135deg, rgba(6, 182, 212, 0.5), rgba(132, 204, 22, 0.5), rgba(34, 211, 238, 0.45))",
           zIndex: -1,
         }}
       />

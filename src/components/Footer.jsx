@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const socialLinks = [
   {
@@ -48,17 +49,7 @@ export default function Footer() {
             className="text-center md:text-left"
           >
             <Link to="/" className="flex items-center gap-2 justify-center md:justify-start group">
-              <motion.img
-                src="/favicon.svg"
-                alt="BinaryBase Logo"
-                className="w-8 h-8"
-                whileHover={{ rotate: 180 }}
-                transition={{ duration: 0.5 }}
-              />
-              <span className="text-xl font-bold tracking-tight">
-                <span className="text-black dark:text-white">Binary</span>
-                <span className="gradient-text ml-1">Base</span>
-              </span>
+              <Logo />
             </Link>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
               Building digital solutions with precision
@@ -79,7 +70,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-100 dark:bg-neutral-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-gray-100 dark:bg-neutral-900 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-cyan-500 hover:text-black dark:hover:bg-cyan-500 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

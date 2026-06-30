@@ -25,7 +25,7 @@ const projects = [
     impact:
       "Enhanced security by keeping data offline and improved testing efficiency with tailored test cases.",
     tech: ["Ollama", "RAG", "Python"],
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-blue-500 to-cyan-500",
     link: "https://airbot-production-3f51.up.railway.app/",
   },
   {
@@ -51,8 +51,8 @@ export default function CaseStudies() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -62,7 +62,7 @@ export default function CaseStudies() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-4"
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 mb-4"
             >
               Case Studies
             </motion.span>
@@ -112,15 +112,15 @@ export default function CaseStudies() {
                       {/* Content */}
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-4">
-                          <h3 className="text-2xl font-semibold text-black dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                          <h3 className="text-2xl font-semibold text-black dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                             {project.title}
                           </h3>
-                          {project.link && (
+                          {project.link && project.title !== "Automated Large Scale Test Case Generator for Aerospace Manufacturing" && (
                             <a
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 transition-colors"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 transition-colors"
                             >
                               <span>Live Demo</span>
                               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,7 +132,7 @@ export default function CaseStudies() {
 
                         <div className="mt-6 grid md:grid-cols-3 gap-6">
                           <div>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
                               Problem
                             </span>
                             <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
@@ -141,7 +141,7 @@ export default function CaseStudies() {
                           </div>
 
                           <div>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                               Solution
                             </span>
                             <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
@@ -150,7 +150,7 @@ export default function CaseStudies() {
                           </div>
 
                           <div>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-pink-600 dark:text-pink-400">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
                               Impact
                             </span>
                             <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">

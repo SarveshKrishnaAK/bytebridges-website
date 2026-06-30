@@ -26,7 +26,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-blue-500 to-cyan-500",
     link: "/services/llm-development",
   },
   {
@@ -50,7 +50,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    gradient: "from-green-500 to-emerald-500",
+    gradient: "from-green-500 to-cyan-500",
     link: "/services/api-integration",
   },
 ];
@@ -64,8 +64,8 @@ export default function Services() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 -left-20 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 -left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-6xl mx-auto w-full relative z-10">
@@ -117,7 +117,7 @@ export default function Services() {
                       </div>
 
                       {/* Content */}
-                      <h3 className="text-xl lg:text-2xl font-semibold text-black dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                      <h3 className="text-xl lg:text-2xl font-semibold text-black dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                         {service.title}
                       </h3>
 
@@ -127,7 +127,7 @@ export default function Services() {
 
                       {/* Hover arrow */}
                       <motion.div
-                        className="mt-6 flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="mt-6 flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity"
                         initial={{ x: -10 }}
                         whileHover={{ x: 0 }}
                       >

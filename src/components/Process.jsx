@@ -68,7 +68,7 @@ export default function Process() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-4"
+              className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 mb-4"
             >
               How We Work
             </motion.span>
@@ -92,7 +92,7 @@ export default function Process() {
             {/* Vertical line - hidden on mobile, shown on md+ */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-200 dark:bg-neutral-800 -translate-x-1/2">
               <motion.div
-                className="w-full bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"
+                className="w-full bg-gradient-to-b from-cyan-500 via-blue-500 to-cyan-500"
                 style={{ height: lineHeight }}
               />
             </div>
@@ -114,7 +114,7 @@ export default function Process() {
                   <div className="md:hidden w-full p-5 rounded-2xl glass-card">
                     <div className="flex items-start gap-4">
                       <motion.div
-                        className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30"
+                        className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30"
                         whileHover={{ scale: 1.1 }}
                       >
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -122,7 +122,7 @@ export default function Process() {
                         </svg>
                       </motion.div>
                       <div className="flex-1">
-                        <span className="text-xs font-bold text-indigo-500 dark:text-indigo-400">
+                        <span className="text-xs font-bold text-cyan-500 dark:text-cyan-400">
                           Step {item.step}
                         </span>
                         <h3 className="text-lg font-semibold text-black dark:text-white">
@@ -139,7 +139,7 @@ export default function Process() {
                   <div className={`hidden md:block flex-shrink-0 relative z-10 ${index % 2 === 0 ? "md:text-right md:flex-1" : "md:flex-1"}`}>
                     <div className={`inline-flex ${index % 2 === 0 ? "md:float-right" : ""}`}>
                       <motion.div
-                        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30"
+                        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >

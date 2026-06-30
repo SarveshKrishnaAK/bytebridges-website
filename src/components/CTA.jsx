@@ -15,7 +15,7 @@ export default function CTA() {
   return (
     <section
       ref={containerRef}
-      className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden"
+      className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-cyan-600 via-blue-600 to-cyan-600 text-white relative overflow-hidden"
     >
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -100,7 +100,7 @@ export default function CTA() {
               href="#contact"
               variant="secondary"
               size="large"
-              className="!bg-white !text-indigo-600 font-semibold hover:!bg-gray-100 shadow-lg sm:shadow-xl shadow-black/30 active:!scale-95 text-sm sm:text-base"
+              className="!bg-white !text-cyan-600 font-semibold hover:!bg-gray-100 shadow-lg sm:shadow-xl shadow-black/30 active:!scale-95 text-sm sm:text-base"
             >
               Start a Conversation
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

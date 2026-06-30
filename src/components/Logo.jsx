@@ -1,32 +1,16 @@
 export default function Logo() {
   return (
     <div className="flex items-center gap-2">
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 100 100"
-        className="text-indigo-600 dark:text-indigo-400"
-        fill="currentColor"
-      >
-        {/* Left Pillar */}
-        <rect x="20" y="30" width="12" height="40" rx="3" />
-        
-        {/* Right Pillar */}
-        <rect x="68" y="30" width="12" height="40" rx="3" />
-        
-        {/* Bridge Arc */}
-        <path
-          d="M26 40 Q50 10 74 40"
-          stroke="currentColor"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
+      <svg width="30" height="30" viewBox="0 0 100 100" className="text-cyan-500 dark:text-cyan-400">
+        <rect x="8" y="8" width="84" height="84" rx="20" fill="currentColor" fillOpacity="0.12" />
+        <rect x="18" y="18" width="64" height="64" rx="14" stroke="currentColor" strokeWidth="4" fill="none" />
+        <path d="M36 30v40" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
+        <circle cx="64" cy="50" r="14" stroke="currentColor" strokeWidth="8" fill="none" />
       </svg>
 
       <span className="text-xl font-bold tracking-wide">
         <span className="text-black dark:text-white">Binary</span>
-        <span className="text-indigo-600 dark:text-indigo-400">
+        <span className="text-cyan-500 dark:text-cyan-400">
           Base
         </span>
       </span>

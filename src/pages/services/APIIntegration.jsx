@@ -99,7 +99,7 @@ export default function APIIntegration() {
       subtitle="Make your tools work together"
       description="Stop wrestling with disconnected systems. We integrate everything seamlessly so your tools work together like they were built for each other. Less manual work, more automation."
       icon={<APIIcon />}
-      gradient="from-green-500 to-emerald-500"
+      gradient="from-green-500 to-cyan-500"
       features={features}
       techStack={techStack}
       process={process}

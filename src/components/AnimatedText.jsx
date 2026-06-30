@@ -146,7 +146,7 @@ export function AnimatedCounter({ value, duration = 2, className = "" }) {
 export function AnimatedLine({ className = "", delay = 0 }) {
   return (
     <motion.div
-      className={`h-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ${className}`}
+      className={`h-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 ${className}`}
       initial={{ scaleX: 0, originX: 0 }}
       whileInView={{ scaleX: 1 }}
       viewport={{ once: true }}

@@ -85,7 +85,7 @@ export default function CursorGlow() {
         }}
         transition={{ duration: 0.2 }}
       >
-        <div className="w-full h-full rounded-full bg-indigo-500/30 dark:bg-indigo-400/40 blur-xl" />
+        <div className="w-full h-full rounded-full bg-cyan-500/30 dark:bg-cyan-400/40 blur-xl" />
       </motion.div>
 
       {/* Outer glow (follows slower) */}
@@ -104,7 +104,7 @@ export default function CursorGlow() {
         }}
         transition={{ duration: 0.3 }}
       >
-        <div className="w-full h-full rounded-full bg-purple-500/20 dark:bg-purple-400/30 blur-2xl" />
+        <div className="w-full h-full rounded-full bg-blue-500/20 dark:bg-blue-400/30 blur-2xl" />
       </motion.div>
 
       {/* Subtle center dot */}
